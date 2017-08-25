@@ -14,7 +14,10 @@ var (
 )
 
 func TestInit(t *testing.T) {
-	jenkins = CreateJenkins(nil, "http://localhost:8080", "admin", "admin")
+	//jenkisnPassword := "admin"
+	jenkinsPassword := "30432b593d804dc19a24ee15673d88e0"
+
+	jenkins = CreateJenkins(nil, "http://localhost:8080", "admin", jenkinsPassword)
 	_, err := jenkins.Init()
 	assert.Nil(t, err, "Jenkins Initialization should not fail")
 }

@@ -526,3 +526,21 @@ func CreateJenkins(client *http.Client, base string, auth ...interface{}) *Jenki
 	}
 	return j
 }
+
+// Create Credentials
+
+func (j *Jenkins) CreateCredential(credential Credential) error {
+	endpoint := "/credentials/store/system/domain/_/createCredentials"
+
+	r, err := j.Requester.Post(endpoint, credential.Payload(), nil, nil)
+
+	if err != nil {
+		return err
+	}
+
+	if r.StatusCode != 200 {
+		return fmt.Errorf("Error creating credentials: %s", r.Status)
+	}
+
+	return nil
+}

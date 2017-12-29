@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>Some Job Description</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <org.datadog.jenkins.plugins.datadog.DatadogJobProperty plugin="datadog@0.6.1">
+      <emitOnCheckout>false</emitOnCheckout>
+    </org.datadog.jenkins.plugins.datadog.DatadogJobProperty>
+    <hudson.plugins.disk__usage.DiskUsageProperty plugin="disk-usage@0.28"/>
+    <com.synopsys.arc.jenkinsci.plugins.jobrestrictions.jobs.JobRestrictionProperty plugin="job-restrictions@0.6"/>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>params1</name>
+          <description>description</description>
+          <defaultValue>defaultVal</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+    <jenkins.branch.RateLimitBranchProperty_-JobPropertyImpl plugin="branch-api@2.0.16">
+      <durationName>hour</durationName>
+      <count>1</count>
+      <userBoost>false</userBoost>
+    </jenkins.branch.RateLimitBranchProperty_-JobPropertyImpl>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders/>
+  <publishers/>
+  <buildWrappers/>
+</project>

@@ -15,7 +15,7 @@
 
 [[projects]]
   name = "github.com/stretchr/testify"
-  packages = ["assert"]
+  packages = ["assert","require"]
   revision = "69483b4bd14f5845b5a1e55bca19e954e827f1d0"
   version = "v1.1.4"
 
@@ -23,11 +23,11 @@
   branch = "master"
   name = "golang.org/x/net"
   packages = ["html","html/atom"]
-  revision = "57efc9c3d9f91fb3277f8da1cff370539c4d3dc5"
+  revision = "d866cfc389cec985d6fda2859936a575a55a3ab6"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "21f1e04f7a1ba933950594a9d6e2e6fa20be8df0ee9d53a1f6b8d335b4885ec2"
+  inputs-digest = "e85016835951933f682825c09911d0d63da29021a509603e534c6f0c7ea32b30"
   solver-name = "gps-cdcl"
   solver-version = 1
